@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#121212" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/main.min.css" rel="stylesheet" />
+  <title>Agendar Evaluaciones</title>
+</head>
+<body>
+  <header>
+    <h1>📅 Agendar Evaluaciones</h1>
+    <button id="toggle-theme">🌙 Cambiar Tema</button>
+  </header>
+
+  <main>
+    <div id="calendar"></div>
+  </main>
+
+  <!-- Modal para agregar evaluación -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Agregar Evaluación</h2>
+      <input type="text" id="materia" placeholder="Materia" />
+      <textarea id="descripcion" placeholder="Descripción (opcional)"></textarea>
+      <label>
+        <input type="checkbox" id="recordatorio" />
+        Recordarme un día antes
+      </label>
+      <input type="time" id="hora-recordatorio" value="08:00" />
+      <button id="guardar">Guardar</button>
+      <button id="cerrar">Cancelar</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/main.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
